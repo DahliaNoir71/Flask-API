@@ -8,10 +8,10 @@ def register_routes(app):
     :return: None
     """
 
+    @app.route('/')
     @app.route('/users')
     def users_list():
         users = get_users()
-        print(users)
         return render_template('users_list.html', users=users)
 
     @app.route('/add_user_form')
