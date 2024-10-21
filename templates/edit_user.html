@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <h1 class="mt-4">Édition d'un utilisateur</h1>
-    <form action="{{ url_for('update_user', user_id=user.id) }}" method="post">
+    <form action="{{ url_for('api_update_user', user_id=user.id) }}" method="post">
         <div class="form-group">
             <label for="username">Nom d'utilisateur:</label>
             <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
@@ -23,6 +23,6 @@
             <a href="{{ url_for('users_list') }}" class="btn btn-secondary ml-auto">Retour</a>
         </div>
     </form>
-    </div>
+</div>
 </body>
 </html>
