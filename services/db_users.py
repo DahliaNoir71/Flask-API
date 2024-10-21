@@ -30,7 +30,8 @@ USERS_REQUESTS = {
     WHERE 
         id = :user_id
     """,
-    "delete_user": "DELETE FROM Users WHERE id = :user_id"
+    "delete_user": "DELETE FROM Users WHERE id = :user_id",
+    "check_email": "SELECT id FROM Users WHERE email = :email"
 }
 
 def get_users():
@@ -91,3 +92,9 @@ def delete_user(user_id):
     sql_connection.execute(USERS_REQUESTS["delete_user"], {"user_id": user_id})
     sql_connection.commit()
     sql_connection.close()
+
+def check_email_unicity(email):
+    sql_connection = get_db_connection(DB_NAME)
+    user = sql_connection.execute(USERS_REQUESTS["check_email"], {"email": email}).fetchone()
+    sql_connection.close()
+    return not user
