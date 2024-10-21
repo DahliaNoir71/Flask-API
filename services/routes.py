@@ -1,11 +1,10 @@
 from flask import render_template, flash
-from services.database import get_users
+from services.db_users import get_users, get_user
 
 
 def register_routes(app):
     """
     :param app: The Flask application instance to register routes on.
-
     :return: None
     """
 
@@ -34,3 +33,12 @@ def register_routes(app):
         :return: None
         """
         return render_template('add_user_form.html')
+
+    @app.route('/edit_user_form/<int:user_id>')
+    def edit_user_form(user_id):
+        """
+        :param app: The Flask application instance to which the route is to be registered.
+        :return: None
+        """
+        user = get_user(user_id)
+        return render_template('edit_user.html', user=user)
