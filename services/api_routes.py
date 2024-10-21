@@ -6,7 +6,9 @@ BASE_API_URL = f'/api/v{VERSION}/'
 
 def register_api_routes(app):
     """
-    :param app: The flask application instance where the API routes will be registered.
+    Registers API routes with the provided Flask application instance.
+
+    :param app: The Flask application instance to register routes with.
     :return: None
     """
 
@@ -24,6 +26,10 @@ def register_api_routes(app):
 
     @app.route('/user/edit/<int:user_id>', methods=['POST'])
     def api_update_user(user_id):
+        """
+        :param user_id: The unique identifier for the user to be edited.
+        :return: A redirect to a list of users if successful, or a 404 error if the user is not found.
+        """
         user = get_user(user_id)
         if not user:
             return "User not found", 404
