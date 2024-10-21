@@ -1,27 +1,25 @@
-# Flask-API Project
+# Projet Flask-API
 
-## Table of Contents
+## Table des Matières
 - [Introduction](#introduction)
-- [Features](#features)
+- [Fonctionnalités](#fonctionnalités)
 - [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+- [Utilisation](#utilisation)
+- [Endpoints de l'API](#endpoints-de-lapi)
+- [Contribution](#contribution)
+- [Licence](#licence)
 
 ## Introduction
-This project is a RESTful API built with Flask, designed to provide various services. The API is designed to be lightweight, fast, and easy to use, leveraging several Python libraries for different functionalities such as geolocation, data handling, and machine learning.
+Ce projet est une API RESTful construite avec Flask, conçue pour fournir divers services. L'API est conçue pour être légère, rapide et facile à utiliser, en utilisant plusieurs bibliothèques Python pour différentes fonctionnalités telles que la géolocalisation, la gestion des données et l'apprentissage automatique.
 
-## Features
-- User management (CRUD operations)
-- Data processing with Pandas
-- Geolocation services with Geopy
-- Machine learning models using Scikit-learn
-- RESTful API design
+## Fonctionnalités
+- Gestion des utilisateurs (opérations CRUD)
+- Conception d'API RESTful
+- Utilisation de Flask
 
 ## Installation
 
-### Prerequisites
+### Prérequis
 - Python 3.12.7
 - Flask
 - Jinja2
@@ -38,61 +36,52 @@ This project is a RESTful API built with Flask, designed to provide various serv
 - Scipy
 - Six
 
-### Steps
-1. Clone the repository:
+### Étapes
+1. Clonez le dépôt :
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/votreutilisateur/votre-repo-name.git
     ```
-2. Navigate to the project directory:
+2. Accédez au répertoire du projet :
     ```bash
-    cd your-repo-name
+    cd votre-repo-name
     ```
-3. Create a virtual environment:
+3. Créez un environnement virtuel :
     ```bash
     python -m venv venv
     ```
-4. Activate the virtual environment:
-    - On Windows:
+4. Activez l'environnement virtuel :
+    - Sous Windows :
         ```bash
         venv\Scripts\activate
         ```
-    - On macOS/Linux:
+    - Sous macOS/Linux :
         ```bash
         source venv/bin/activate
         ```
-5. Install the required packages:
+5. Installez les packages requis :
     ```bash
     pip install -r requirements.txt
     ```
 
-## Usage
-1. Run the Flask application:
+## Utilisation
+1. Lancez l'application Flask :
     ```bash
     flask run
     ```
-2. The API will be accessible at `http://127.0.0.1:5000/`.
+2. L'API sera accessible à `http://127.0.0.1:5000/`.
 
-## API Endpoints
-Here are some example endpoints. Refer to the code for a full list of available endpoints.
+## Endpoints de l'API
+Voici quelques exemples de endpoints. Consultez le code pour une liste complète des endpoints disponibles.
 
-### User Management
-- **GET /users**: Retrieve a list of users.
-- **POST /users**: Create a new user.
-- **GET /users/<id>**: Retrieve a specific user by ID.
-- **PUT /users/<id>**: Update a specific user by ID.
-- **DELETE /users/<id>**: Delete a specific user by ID.
+### Gestion des Utilisateurs
+- **GET /users** : Récupère une liste d'utilisateurs.
+- **POST /users** : Crée un nouvel utilisateur.
+- **GET /users/<id>** : Récupère un utilisateur spécifique par ID.
+- **PUT /users/<id>** : Met à jour un utilisateur spécifique par ID.
+- **DELETE /users/<id>** : Supprime un utilisateur spécifique par ID.
 
-### Data Analysis
-- **POST /data/process**: Process data with Pandas.
+## Contribution
+Les contributions sont les bienvenues ! Veuillez ouvrir une issue ou soumettre une pull request pour toute modification ou amélioration.
 
-### Geolocation
-- **GET /geo/address**: Get coordinates for a given address.
-
-### Machine Learning
-- **POST /ml/predict**: Get predictions from a machine learning model.
-
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## Licence
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
