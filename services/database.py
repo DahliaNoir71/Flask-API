@@ -1,7 +1,16 @@
 import sqlite3
-from services.db_users import create_table_users
 
 DB_NAME = "users.db"
+
+CREATE_TABLES_REQUESTS = {
+    "create_users_table": """
+        CREATE TABLE IF NOT EXISTS Users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT,
+            email TEXT
+        )
+    """
+}
 
 def get_db_connection(db_name):
     """
@@ -19,7 +28,7 @@ def create_tables(connection):
     :param connection: Database connection object used to execute SQL commands
     :return: None
     """
-    create_table_users(connection)
+    connection.execute(CREATE_TABLES_REQUESTS["create_users_table"])
 
 def init_db():
     """
