@@ -4,6 +4,9 @@ from services.api_routes import register_api_routes
 from services.database import init_db
 
 app = Flask(__name__)
+app.config['SESSION_TYPE'] = 'memcached'
+app.config['SECRET_KEY'] = 'super secret key'
+
 
 register_api_routes(app)
 register_routes(app)
