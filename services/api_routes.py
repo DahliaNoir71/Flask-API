@@ -12,6 +12,11 @@ def register_api_routes(app):
 
     @app.route('/add_user', methods=['POST'])
     def add_user():
+        """
+        Registers API routes with the provided Flask application instance.
+
+        :return: None
+        """
         username = request.form['username']
         email = request.form['email']
         insert_user(username, email)
