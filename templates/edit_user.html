@@ -1,0 +1,28 @@
+<!-- templates/edit_user.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Édition d'un utilisateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Édition d'un utilisateur</h1>
+    <form action="{{ url_for('update_user', user_id=user.id) }}" method="post">
+        <div class="form-group">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+            <a href="{{ url_for('users_list') }}" class="btn btn-secondary ml-auto">Retour</a>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
