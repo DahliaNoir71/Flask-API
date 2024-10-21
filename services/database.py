@@ -7,7 +7,7 @@ CREATE_TABLES_REQUESTS = {
         CREATE TABLE IF NOT EXISTS Users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT,
-            email TEXT
+            email TEXT UNIQUE
         )
     """
 }
